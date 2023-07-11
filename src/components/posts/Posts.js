@@ -1,5 +1,5 @@
 
-import React, {useEffect, useState} from 'react';
+import  {useEffect, useState} from 'react';
 import Post from "./post/Post";
 import post from "./post/Post";
 

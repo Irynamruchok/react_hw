@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const PostDetails = ({post}) => {
     const {id, postId, title, body} = post
