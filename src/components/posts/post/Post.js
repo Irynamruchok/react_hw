@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import posts from "../Posts";
+
 import PostDetails from "../postdetails/PostDetails";
 
 const Post = ({post}) => {
@@ -9,8 +9,8 @@ const Post = ({post}) => {
         <div>
           <h1> Id: {id}</h1>
             <h2> Title: {title}</h2>
-            <button onClick={()=> setIsShow (!isShow)}>{isShow?'Hide':'Show'}</button>
-            {isShow&& <PostDetails post={post}/>}
+            <button onClick={()=> setIsShow(prevState => !prevState)}>{isShow ?'Hide':'Show'}</button>
+            {isShow && <PostDetails post={post} />}
         </div>
     );
 };
