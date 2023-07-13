@@ -12,7 +12,7 @@ const UsersComponent = ({handleUserClick}) => {
     }, [])
     return (
         <div>
-            {users.map((user)=> <UserComponent key={user.id} user={user}   handleUserClick={handleUserClick}/>)}
+            {users.map((user)=> <UserComponent key={user.id} user={user} handleUserClick={handleUserClick}/>)}
         </div>
     );
 };

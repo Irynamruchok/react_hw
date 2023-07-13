@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import PostList from "../PostList/PostList";
 
-const UserComponent = ({id,name,username,handleUserClick,userId}) => {
+const UserComponent = ({user}) => {
+    const {id,name,username,handleUserClick,userId} = user
     const [showPosts, setShowPosts] = useState(false)
     const handleClick = () => {
         setShowPosts(true);

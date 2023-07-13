@@ -1,6 +1,7 @@
 import React from 'react';
 
-const UserPost = ({id,title,body}) => {
+const UserPost = ({post}) => {
+    const {id,title,body} = post
     return (
         <div>
             <h4>Id:{id}</h4>
