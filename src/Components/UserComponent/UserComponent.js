@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import PostList from "../PostList/PostList";
 
 const UserComponent = ({user, handleUserClick}) => {
-    const {id,name,username,userId} = user
+    const {id,name,username} = user
     const [showPosts, setShowPosts] = useState(false)
     const handleClick = () => {
         setShowPosts(true);
-        handleUserClick (userId)
+        handleUserClick (id)
     }
 
     return (
@@ -14,7 +14,8 @@ const UserComponent = ({user, handleUserClick}) => {
             <h2>Id:{id}</h2>
             <h2>Name:{name}</h2>
             <h2>Username:{username}</h2>
-            {showPosts? (<PostList userId={userId}/>) :  (<button onClick={handleClick}>Show Posts </button> )}
+
+            {showPosts? (<PostList userId={id}/>) :  (<button onClick={handleClick}>Show Posts </button> )}
 
         </div>
     );
