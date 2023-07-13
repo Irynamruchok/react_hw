@@ -1,6 +1,6 @@
-import UsersDetails from "../usersdetails/UsersDetails";
-import UserAddress from "../useraddress/UserAddress";
-import Company from "../company/Company";
+import UsersDetails from "../UsersDetails/UsersDetails";
+import UserAddress from "../UserAddress/UserAddress";
+import Company from "../Сompany/Company";
 
 const Users = ({user}) => {
     return (

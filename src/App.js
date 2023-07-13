@@ -1,7 +1,7 @@
 
 import './App.css';
 import {useEffect, useState} from "react";
-import Users from "./components/users/Users";
+import Users from "./Сomponents/Users/Users";
 
 const App = () =>{
   const [users, setUsers] = useState([])
