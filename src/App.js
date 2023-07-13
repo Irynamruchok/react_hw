@@ -1,34 +1,17 @@
 
 import './App.css';
-import UserComponent from "./components/usercomponent/UserComponent";
-import {useEffect, useState} from "react";
-
+import UsersComponent from "./Components/UsersComponent/UsersComponent";
+import {useState} from "react";
+import PostList from "./Components/PostList/PostList";
 const App =()=> {
-    {
-        const [users, setUsers] = useState([])
-        const [selectedUserId, setSelectedUserId] = useState(null)
-        const [posts, setPosts] = useState([])
-
-        useEffect(() => {
-            fetch('https://jsonplaceholder.typicode.com/users')
-                .then(value => value.json())
-                .then(value => setUsers(value))
-        }, [])
-        const handleShowPosts = (userId) => {
-            setSelectedUserId(userId);
-        }
-        useEffect(() => {
-            fetch('https://jsonplaceholder.typicode.com/posts?userId=${userId}`')
-                .then(value => value.json())
-                .then(value => setPosts())
-        })
-
-    }
-
+const [selectedUserId, setSelectedUserId] = useState(null)
+   const handleUserClick = (userId)=>{
+    setSelectedUserId(userId)
+   }
     return (
         <div>
-            <h1>Users</h1>
-
+<UsersComponent handleUserClick={handleUserClick} />
+            {selectedUserId && <PostList userId={selectedUserId}/>}
 
         </div>
     );
