@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PostList from "../../PostList/PostList";
+import PostList from "../PostList/PostList";
 
 const UserComponent = ({id,name,username,handleUserClick,userId}) => {
     const [showPosts, setShowPosts] = useState(false)

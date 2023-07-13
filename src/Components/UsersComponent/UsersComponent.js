@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import UserComponent from "./UserComponent/UserComponent";
+import UserComponent from "../UserComponent/UserComponent";
 
 const UsersComponent = ({handleUserClick}) => {
 
