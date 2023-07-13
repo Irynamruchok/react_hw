@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import PostList from "../PostList/PostList";
 
-const UserComponent = ({user}) => {
-    const {id,name,username,handleUserClick,userId} = user
+const UserComponent = ({user, handleUserClick}) => {
+    const {id,name,username,userId} = user
     const [showPosts, setShowPosts] = useState(false)
     const handleClick = () => {
         setShowPosts(true);
-        handleUserClick(userId)
+        handleUserClick (userId)
     }
+
     return (
         <div>
             <h2>Id:{id}</h2>
