@@ -14,7 +14,7 @@ useEffect(()=>{
 
   return (
     <div className="App">
-      {users.map(user=><Users key={user.id} user={user}/>) }
+<Users users={users}/>
     </div>
   );
 }

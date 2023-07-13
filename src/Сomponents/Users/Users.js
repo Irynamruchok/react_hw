@@ -1,13 +1,11 @@
-import UsersDetails from "../UsersDetails/UsersDetails";
-import UserAddress from "../UserAddress/UserAddress";
-import Company from "../Сompany/Company";
 
-const Users = ({user}) => {
+import User from "../User/User";
+const Users = ({users}) => {
     return (
         <div>
-            <UsersDetails  key={user.id} user={user} />
-            <UserAddress key={user.id} user={user} />
-            <Company key={user.id} user={user} />
+
+            {users.map(user => <User key={user.id} user={user}/>) }
+
         </div>
     );
 };
