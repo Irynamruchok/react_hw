@@ -1,19 +1,18 @@
 import React, {useContext} from 'react';
-import {SubChildContext} from "../SubChildTwoTwo/SubChildTwoTwo";
+import {ChildContext} from "../../App";
 
 const SubChildOneOne = () => {
-    const {users} = useContext(SubChildContext)
-    console.log(users? users:"")
-
+    const {title,users} = useContext( ChildContext)
     return (
         <div >
-            {/*<h2>{title}</h2>*/}
-            {/*{users.map((user)=>*/}
+            <h2>{title}</h2>
+            {users.map((user)=>
+                <div  key={user.id}>
 
-                {/*<div  key={user.id}>*/}
-                {/*<p> {user.name}</p>*/}
-                {/*</div>*/}
-             {/*)}*/}
+                    <p>{user.name}</p>
+                </div>
+
+            )}
         </div>
     );
 };
