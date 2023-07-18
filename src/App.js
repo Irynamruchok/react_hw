@@ -3,15 +3,16 @@ import './App.css';
 
 import ChildOne from "./Components/ChildOne/ChildOne";
 import ChildTwo from "./Components/ChildTwo/ChildTwo";
-import {createContext} from "react";
+import {createContext, useState} from "react";
 
-const initial ={title:"", users:[]}
-export const ChildContext = createContext(initial)
+
+export const ChildContext = createContext({})
 function App() {
+    const [users,setUsers] = useState([])
   return (
     <div className="App">
 
-<ChildContext.Provider  value={initial}>
+<ChildContext.Provider  value={{users, setUsers }}>
 
     <ChildOne/>
     <ChildTwo/>
