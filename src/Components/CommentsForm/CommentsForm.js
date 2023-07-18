@@ -12,11 +12,11 @@ const CommentsForm = () => {
       e.preventDefault();
 
        fetch('https://jsonplaceholder.typicode.com/comments',{method:"POST",body:JSON.stringify({
-               postIdRef: postIdRef.current.value,
-               idRef:idRef.current.value,
-               nameRef:nameRef.current.value,
-               emailRef:emailRef.current.value,
-               bodyRef:bodyRef.current.value
+               postId: postIdRef.current.value,
+               id:idRef.current.value,
+               name:nameRef.current.value,
+               email:emailRef.current.value,
+               body:bodyRef.current.value
            })})
            .then(value => value.json())
            .then(value => console.log(value))
