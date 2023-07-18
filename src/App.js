@@ -5,7 +5,6 @@ import ChildOne from "./Components/ChildOne/ChildOne";
 import ChildTwo from "./Components/ChildTwo/ChildTwo";
 import {createContext, useState} from "react";
 
-
 export const ChildContext = createContext({})
 function App() {
     const [users,setUsers] = useState([])
@@ -13,10 +12,8 @@ function App() {
     <div className="App">
 
 <ChildContext.Provider  value={{users, setUsers }}>
-
     <ChildOne/>
     <ChildTwo/>
-
 </ChildContext.Provider>
 
 
