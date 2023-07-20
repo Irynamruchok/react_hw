@@ -17,9 +17,14 @@ const CommentsForm = () => {
                name:nameRef.current.value,
                email:emailRef.current.value,
                body:bodyRef.current.value
-           })})
+           }),
+           headers: {
+               'Content-Type': 'application/json; charset=UTF-8',
+           },
+       })
            .then(value => value.json())
            .then(value => console.log(value))
+           .catch(error => console.error('Помилка при відправленні коментаря:', error))
    }
     return (
         <div className={styles.wrapper}>
