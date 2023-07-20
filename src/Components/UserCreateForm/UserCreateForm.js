@@ -12,9 +12,14 @@ const UserCreateForm = () => {
                 id:idRef.current.value,
                 name:nameRef.current.value,
                 username:usernameRef.current.value
-            })})
+            }),
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
+        })
             .then(value => value.json())
             .then(value => console.log(value))
+            .catch(error=> console.error('Помилка при відправленні користувача',error))
    }
     return (
         <div>
