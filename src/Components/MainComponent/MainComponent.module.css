@@ -1,0 +1,8 @@
+.mainContainer{
+    width: 100%;
+    background-color: #6e8384;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: space-between;
+}
