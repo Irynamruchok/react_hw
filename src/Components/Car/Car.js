@@ -1,7 +1,7 @@
 import React from 'react';
 import DeleteCars from "../DeleteCars/DeleteCars";
 import UpdateCars from "../UpdateCars/UpdateCars";
-import styles from './car.module.css'
+import styles from './Car.module.css'
 const Car = ({cars,onDeleteCar}) => {
     return (
         <div  >
