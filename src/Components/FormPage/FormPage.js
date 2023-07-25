@@ -1,9 +1,10 @@
-import CreateCarForm from "../CreateCarForm/CreateCarForm";
 
+import Cars from "../Cars/Cars";
+import styles from './FormPage.module.css'
 const FormPage = () => {
     return (
-        <div>
-<CreateCarForm/>
+        <div className={styles.wrapper}>
+            <Cars/>
         </div>
     );
 };
