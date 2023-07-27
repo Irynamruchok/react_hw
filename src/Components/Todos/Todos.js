@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {GetServices} from "../../Services/Services";
+import Todo from "../../Todo/Todo";
 
 const Todos = () => {
 const [todos, setTodos]=useState([])
@@ -7,16 +8,8 @@ const [todos, setTodos]=useState([])
         GetServices.handleGetTodos(setTodos)
     },[])
     return (
-        <div>
-            {todos.map((todo)=>{
-               return(
-                   <div key={todo.id}>
-                       <h1>{todo.title}</h1>
-                       <p>{todo.completed}</p>
-                   </div>
-               )
-            })}
-        </div>
+          <Todo key={todos.id} todos={todos}/>
+
     );
 };
 
