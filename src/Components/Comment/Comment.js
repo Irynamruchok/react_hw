@@ -10,7 +10,7 @@ const Comment = ({comment}) => {
           <p>{comment.name}</p>
           <p>{comment.email}</p>
           <p>{comment.body}</p>
-          <Link to={AppRoutes.POSTS}> Show Post </Link>
+          <Link to={AppRoutes.POSTS + `${postId}`}> Show Post </Link>
 
       </div>
   )
