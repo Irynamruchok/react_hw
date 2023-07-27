@@ -2,7 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import AppLayout from "../Components/AppLayout/AppLayout";
 import {AppRoutes} from "./AppRoutes";
 import Todos from "../Components/Todos/Todos";
-import InfoPage from "../Components/InfoPage/InfoPage";
+import Main from "../Components/Main/Main";
 import Albums from "../Components/Albums/Albums";
 import Comments from "../Components/Comments/Comments";
  export const router = createBrowserRouter([
@@ -11,7 +11,7 @@ import Comments from "../Components/Comments/Comments";
         children:[
             {
                 path:'/',
-                element: <InfoPage/>
+                element: <Main/>
             },
             {
                 path: AppRoutes.TODOS,

@@ -1,6 +1,6 @@
 
 
-const InfoPage = () => {
+const Main = () => {
     return (
         <div>
             InfoPage
@@ -8,4 +8,4 @@ const InfoPage = () => {
     );
 };
 
-export default InfoPage;
+export default Main;
