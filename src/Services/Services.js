@@ -5,7 +5,7 @@ const {REACT_APP_BASEURL} = process.env
  export const GetServices ={
     handleGetTodos:(setTodos)=>{
         axios.get(REACT_APP_BASEURL + Endpoints.TODOS)
-            .then(response => {setTodos(response.data)})
+            .then(response => setTodos(response.data))
             .catch(error => console.error(error));
     },
      handleGetAlbums:(setAlbums)=>{
@@ -17,5 +17,10 @@ const {REACT_APP_BASEURL} = process.env
         axios.get(REACT_APP_BASEURL+Endpoints.COMMENTS)
             .then(response =>setComments(response.data))
             .catch(error=>console.error(error));
-     }
+     },
+handleGetPost:(postId,setPost)=>{
+        axios.get(`${REACT_APP_BASEURL}${Endpoints.POSTS}/${postId}`)
+            .then(response=>setPost(response.data))
+            .catch(error=>console.error(error));
+}
 }

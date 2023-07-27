@@ -3,5 +3,5 @@
     TODOS: '/todos',
     ALBUMS:'/albums',
     COMMENTS:'/comments',
-    POSTS:'/posts'
+    POSTS:`comments/posts`
 }

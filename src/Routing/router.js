@@ -5,6 +5,7 @@ import Todos from "../Components/Todos/Todos";
 import Main from "../Components/Main/Main";
 import Albums from "../Components/Albums/Albums";
 import Comments from "../Components/Comments/Comments";
+import Post from "../Components/Post/Post";
  export const router = createBrowserRouter([
     {
         element: <AppLayout/>,
@@ -24,6 +25,12 @@ import Comments from "../Components/Comments/Comments";
             {
                 path: AppRoutes.COMMENTS,
                 element: <Comments/>,
+                children:[
+                    {
+                        path:AppRoutes.POSTS,
+                        element:<Post/>
+                    }
+                ]
             }
         ]
     },

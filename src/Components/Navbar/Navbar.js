@@ -1,5 +1,4 @@
 import styles from './Navbar.module.css'
-import {Outlet} from "react-router-dom";
 import {AppRoutes} from "../../Routing/AppRoutes";
 import {Link} from "react-router-dom";
 const Navbar = () => {
@@ -28,7 +27,7 @@ const Navbar = () => {
                     {button.label}
                 </Link>
             )}
-              <Outlet/>
+
         </div>
     );
 };
