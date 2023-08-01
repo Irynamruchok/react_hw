@@ -7,7 +7,7 @@ class Post extends React.Component{
         return(
             <div className={styles.postWrapper}>
                 <h4> Title:{post.title}</h4>
-                <p> Body:{post.body}</p>
+                <p>  Body:{post.body}</p>
             </div>
         )
     }

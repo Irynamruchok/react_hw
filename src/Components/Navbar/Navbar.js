@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className={styles.navbar}>
             {buttons.map((button,idx)=>
             <Link  key={idx} to={button.route} className={styles.link}>
-                {button.label}
+             {button.label}
             </Link>
             )}
         </div>

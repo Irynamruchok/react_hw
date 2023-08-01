@@ -2,7 +2,6 @@ import React from "react";
 
 import styles from './Comment.module.css'
 class Comment extends React.Component{
-
     render() {
         const {comment} = this.props
         return(

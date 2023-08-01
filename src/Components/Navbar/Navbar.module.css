@@ -1,6 +1,7 @@
 .navbar{
     width: 100%;
-    background-colorcolor: darkslategray;
+    height: 80px;
+    background-color: darkslategray;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -10,4 +11,5 @@
 .link{
     text-decoration: none;
     color: aliceblue;
+
 }
