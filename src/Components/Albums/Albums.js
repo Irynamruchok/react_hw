@@ -5,7 +5,10 @@ import Album from "../Album/Album";
 const Albums = () => {
     const [albums, setAlbums] = useState([])
     useEffect(() => {
-        GetServices.handleGetAlbums(setAlbums)
+        GetServices.handleGetAlbums()
+            .then(albumsData=>{
+                setAlbums(albumsData)
+            })
     }, [])
     return(<div>
         {albums.map((album)=>{

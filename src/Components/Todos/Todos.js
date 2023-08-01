@@ -5,8 +5,12 @@ import Todo from "../Todo/Todo";
 const Todos = () => {
 const [todos, setTodos]=useState([])
     useEffect(()=>{
-        GetServices.handleGetTodos(setTodos)
+        GetServices.handleGetTodos()
+            .then(todosData => {
+                setTodos(todosData);
+            })
     },[])
+
     return (
       <div>
           {todos.map((todo)=>{

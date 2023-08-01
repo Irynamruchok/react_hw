@@ -6,13 +6,16 @@ const Post = () => {
     const {postId} = useParams()
     const [post,setPost] = useState(null)
     useEffect(()=>{
-        GetServices.handleGetPost(postId,setPost)
+        GetServices.handleGetPost(postId)
+            .then(postData=>{
+                setPost(postData)
+            })
     },[postId]);
 
     console.log(post)
     return (
         <div>
-            {post.title}
+            {post?.title}
         </div>
     );
 };

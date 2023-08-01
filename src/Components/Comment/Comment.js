@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {AppRoutes} from "../../Routing/AppRoutes";
+
 
 const Comment = ({comment}) => {
     const {postId, id, name, email, body} = comment
@@ -11,7 +11,7 @@ const Comment = ({comment}) => {
           <p>{name}</p>
           <p>{email}</p>
           <p>{body}</p>
-          <Link to={`${AppRoutes.POSTS}/${postId}`}>Show Post</Link>
+          <Link to={`posts/${postId}`}>Show Post</Link>
 
       </div>
   )

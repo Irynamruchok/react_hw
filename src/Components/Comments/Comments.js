@@ -6,7 +6,12 @@ import {Outlet} from "react-router-dom";
 
 const Comments = () => {
     const [comments, setComments] = useState([])
-    useEffect(()=>{GetServices.handleGetComments(setComments)},[])
+    useEffect(()=>{
+        GetServices.handleGetComments()
+            .then(commentsData=>{
+                setComments(commentsData)
+            })
+    },[])
 
     return (
         <div>
