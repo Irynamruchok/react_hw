@@ -3,7 +3,8 @@ import {AppRoutes} from "./AppRoutes";
 import Posts from "../PostsClassComponent/Posts/Posts";
 import Comments from "../CommentsClassComponent/Comments/Comments";
 import Cars from "../CarsClassComponent/Cars/Cars";
-
+import AppLayout from "../Layouts/AppLayout";
+import MainComponent from "../MainComponent/MainComponent";
 
 export const router = createBrowserRouter([
     {
@@ -11,7 +12,7 @@ export const router = createBrowserRouter([
         children:[
             {
                 path:AppRoutes.MAIN,
-                element:<Main/>
+                element:<MainComponent/>
             },
             {
                 path:AppRoutes.POSTS,

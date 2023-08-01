@@ -1,0 +1,13 @@
+.navbar{
+    width: 100%;
+    background-colorcolor: darkslategray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
+}
