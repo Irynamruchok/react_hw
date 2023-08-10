@@ -1,9 +1,10 @@
-import React from 'react';
-import {CarServices} from "../../Services/ApiServices";
-const DeleteCarButton = ({carId,setCars, cars}) => {
+
+import {useDispatch} from "react-redux";
+import {deleteCar} from "../../Thunks/carThunkActions";
+const DeleteCarButton = (carId) => {
+    const dispatch = useDispatch()
     const handleDelete = ()=>{
-        CarServices.handleDelete(carId)
-        setCars(cars.filter((car) => car.id !== carId));
+       dispatch(deleteCar(carId))
     }
 
     return (

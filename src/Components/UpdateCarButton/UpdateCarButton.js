@@ -1,17 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import UpdateCarForm from "../UpdateCarForm/UpdateCarForm";
-  const UpdateCarButton = ({carId, setCars, cars}) => {
-  const[showForm, setShowForm] = useState(false)
+import {useDispatch, useSelector} from "react-redux";
+  const UpdateCarButton = (carId) => {
+   const dispatch = useDispatch()
+      const  selectedCar = useSelector((state) => state.selectedCar)
     const handleForm =()=>{
-      setShowForm(true)
+      dispatch(selectedCar(carId))
     }
     const handleFormSuccess =()=>{
-     setShowForm(false)
+
     }
     return (
         <div>
             <button style={{width:'100px', height:'40px'}} type={"button"} onClick={handleForm}> Update Car </button>
-            <div>{showForm? <UpdateCarForm carId={carId} setCars={setCars} cars={cars} onSuccess={handleFormSuccess}/>:null}</div>
+            <div>{selectedCar === carId && <UpdateCarForm carId={carId} onSuccess={handleFormSuccess}/> }</div>
         </div>
     );
 };

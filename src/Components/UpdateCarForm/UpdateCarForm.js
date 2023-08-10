@@ -1,17 +1,15 @@
 import React from 'react';
 import styles from './UpdateCarForm.module.css'
 import {useForm} from "react-hook-form";
-import {CarServices} from "../../Services/ApiServices";
-const UpdateCarForm = ({onSuccess, carId, setCars, cars}) => {
+import {useDispatch, useSelector} from "react-redux";
+import {updateCar} from "../../Thunks/carThunkActions";
+const UpdateCarForm = ({onSuccess, carId}) => {
+    const dispatch = useDispatch()
+    const cars = useSelector((state) => state.cars);
     const {register, handleSubmit,formState: { errors }} = useForm()
     const onSubmit =(formData)=>{
-        CarServices.handleUpdate(carId,formData)
-        const updatedCar = { ...formData, id: carId }
-        setCars(
-            cars.map((car) => (car.id === updatedCar.id ? updatedCar : car))
-        );
-        onSuccess();
-
+        dispatch(updateCar(carId, formData));
+      onSuccess()
     }
     return (
         <div>

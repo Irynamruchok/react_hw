@@ -1,21 +1,15 @@
 import DeleteCarButton from "../DeleteCarButton/DeleteCarButton";
 import UpdateCarButton from "../UpdateCarButton/UpdateCarButton";
-const Car = ({cars, setCars}) => {
+const Car = ({car}) => {
     return (
-        <div>
-            {cars.map((car)=>{
-                return(
-                    <div key={car.id} >
+            <div key={car.id} >
                         <h1>Brand:{car.brand}</h1>
                         <p>Price:{car.price}</p>
                         <p>Year:{car.year}</p>
-                        <DeleteCarButton carId={car.id} setCars={setCars} cars={cars}/>
+                        <DeleteCarButton carId={car.id}  car={car}/>
                         <br/>
-                        <UpdateCarButton carId={car.id} setCars={setCars} cars={cars}/>
+                        <UpdateCarButton carId={car.id}  car={car}/>
                     </div>
-                )
-            })}
-        </div>
     );
 };
 export default Car;

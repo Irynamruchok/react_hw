@@ -1,13 +1,15 @@
 import {useForm} from "react-hook-form";
-import {CarServices} from "../../Services/ApiServices";
 import styles from './CreateCarForm.module.css'
+import {useDispatch} from "react-redux";
+import {createCar} from "../../Thunks/carThunkActions";
 
 const CreateCarForm = ({onAddCar}) => {
+    const dispatch = useDispatch()
     const {register, handleSubmit,formState: { errors }} = useForm()
-    const onSubmit =(data)=>{
-        CarServices.handleCreate(data)
-        onAddCar(data)
-    }
+    const onSubmit = async (data) => {
+        const createdCar = await dispatch(createCar(data));
+        onAddCar(createdCar);
+    };
 
     return (
         <div>
