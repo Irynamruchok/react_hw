@@ -6,6 +6,7 @@ const Episode = ({episode}) => {
            <div>{episode.id}</div>
             <div>{episode.name}</div>
             <div>{episode.episode}</div>
+            hello
         </div>
     );
 };
