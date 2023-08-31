@@ -15,7 +15,8 @@ const Navbar = () => {
         {
             label: 'Posts',
             route: AppRoutes.POSTS
-        }
+        },
+
     ]
     return (
         <div className={styles.wrapper}>

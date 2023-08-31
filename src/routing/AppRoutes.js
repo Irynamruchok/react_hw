@@ -3,5 +3,5 @@ export const AppRoutes = {
     USERS: '/users',
     ALBUMS: '/albums',
     POSTS:'/posts',
-    PHOTOS:'photos'
+
 }
