@@ -12,7 +12,7 @@ const Cars = () => {
     },[trigger])
     return (
         <div>
-            <CarCreateForm setTigger={setTrigger}/>
+            <CarCreateForm setTrigger={setTrigger}/>
             {cars.map((car) => <Car key={car.id} car={car}/>)}
         </div>
     );
